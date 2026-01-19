@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Wordly</title>
+</head>
+<body>
+  <header>
+    <h1>Wordly</h1>
+    <h2>Search words with confidence</h2>
+  </header>
+
+    <!-- Search form -->
+<form id="search-form" aria-label="Search for a word">
+  <label for="query" class="form-item word-placeholder ">Word</label>
+  <input type="text" id="query" name="query" placeholder="Enter a word..." required class="form-item form-border"/>
+  <button type="submit" class="form-item submit-btn form-border">Search</button>
+</form>
+
+<!-- Results section -->
+<section id="results" aria-live="polite">
+  <!-- Placeholder: clicked/queried word -->
+  <h2 id="word-placeholder">Word: -</h2>
+
+  <!-- Placeholder: phonetics/pronunciation text -->
+  <div id="phonetics-placeholder">
+    <strong>Pronunciation:</strong> <span id="pronunciation-text">-</span>
+  </div>
+
+  <!-- Placeholder: audio playback for pronunciation -->
+  <div id="audio-placeholder">
+    <strong>Audio:</strong>
+    <!-- audio element will be populated dynamically -->
+    <div id="audio-container">
+      <!-- Example: <audio controls src="..."></audio> -->
+    </div>
+  </div>
+
+  <!-- Placeholder: definitions -->
+  <div id="definitions-placeholder">
+    <strong>Definitions:</strong>
+    <ol id="definitions-list">
+      <!-- List items will be injected here -->
+    </ol>
+  </div>
+
+  <!-- Placeholder: synonyms -->
+  <div id="synonyms-placeholder">
+    <strong>Synonyms:</strong>
+    <ul id="synonyms-list">
+      <!-- Synonym items will be injected here -->
+    </ul>
+  </div>
+
+  <!-- Placeholder: error / status messages -->
+  <div id="status-message" role="status" aria-live="assertive"></div>
+</section>
+
+<!-- Minimal inline script to wire UI placeholders (functionality file will be provided separately) -->
+
+</body>
+</html>
